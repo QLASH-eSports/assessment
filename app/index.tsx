@@ -1,5 +1,9 @@
-import { Redirect } from "expo-router"
-
+import { Redirect } from "expo-router";
+import { Provider as PaperProvider } from "react-native-paper";
 export default function Index() {
-  return <Redirect href="onboarding/signup" />
+  return (
+    <PaperProvider>
+      <Redirect href="onboarding" />
+    </PaperProvider>
+  );
 }
