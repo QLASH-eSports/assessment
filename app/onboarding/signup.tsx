@@ -1,18 +1,29 @@
-import { Link, Stack } from "expo-router";
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { Stack } from "expo-router";
+import { StyleSheet, View } from "react-native";
+import Swiper from "react-native-swiper";
+import SlideOne from "../components/Slides/SlideOne";
+import SlideThree from "../components/Slides/SlideThree";
+import SlideFour from "../components/Slides/SlideFour";
+import SlideTwo from "../components/Slides/SlideTwo";
 
 export default function Signup() {
   const options = {
-    title: "Signup",
+    headerShown: false,
   };
 
   return (
     <View style={styles.container}>
       <Stack.Screen options={options} />
-      <Link style={styles.button} href="/onboarding/game-selection" asChild>
-        <Text>to game selection</Text>
-      </Link>
+      <Swiper
+        dotColor={"rgba(255,255,255,.7)"}
+        activeDotColor={"#6BF3E7"}
+        showsButtons={false}
+      >
+        <SlideOne />
+        <SlideTwo />
+        <SlideThree />
+        <SlideFour />
+      </Swiper>
     </View>
   );
 }
@@ -20,14 +31,5 @@ export default function Signup() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-	button: {
-		borderWidth: 1,
-		borderColor: 'black',
-		padding: 15,
-		borderRadius: 5,
-	}
+  }
 });
