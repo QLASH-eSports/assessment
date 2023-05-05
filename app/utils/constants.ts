@@ -1,0 +1,1 @@
+export const IS_APP_LAUNCHED = "@storage_isAppLaunched"
