@@ -13,8 +13,6 @@ export default function Index() {
   // UI hooks
   const [isAppLaunched, setIsAppLaunched] = useState<string>();
 
-  // AsyncStorage.clear()
-
   // Function to check if it's the first time launching the app
   const loadAppAsync = async () => {
     try {
